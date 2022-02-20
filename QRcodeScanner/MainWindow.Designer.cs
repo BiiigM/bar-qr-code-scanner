@@ -50,8 +50,9 @@ namespace QRcodeScanner
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(224, 85);
             this.Controls.Add(this.selectButton);
+            this.MaximizeBox = false;
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.Text = "Scanner";
             this.ResumeLayout(false);
         }
 
