@@ -44,6 +44,14 @@
         <Reference Include="System.Net.Http" />
         <Reference Include="System.Windows.Forms" />
         <Reference Include="System.Xml" />
+        <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60">
+          <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
+        <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60">
+          <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.presentation.dll</HintPath>
+          <Private>True</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainWindow.cs">
@@ -75,6 +83,7 @@
         <EmbeddedResource Include="SelectArea.resx">
           <DependentUpon>SelectArea.cs</DependentUpon>
         </EmbeddedResource>
+        <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
             <LastGenOutput>Settings.Designer.cs</LastGenOutput>

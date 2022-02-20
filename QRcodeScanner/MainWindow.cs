@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ZXing;
 
 namespace QRcodeScanner
 {
@@ -17,7 +18,14 @@ namespace QRcodeScanner
             Image test = SelectArea.GetCode();
             if (test != null)
             {
-                Clipboard.SetImage(test);
+                Bitmap bitmap = new Bitmap(test);
+                BarcodeReader reader = new BarcodeReader {AutoRotate = true, Options = {TryHarder = true}};
+                Result results = reader.Decode(bitmap);
+                if (results != null)
+                {
+                    string decoded = results.ToString().Trim();
+                    Clipboard.SetText(decoded);
+                }
             }
             Show();
         }

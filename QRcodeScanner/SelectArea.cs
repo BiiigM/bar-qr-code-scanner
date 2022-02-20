@@ -87,9 +87,10 @@ namespace QRcodeScanner
         }
         
         //Cancel the selection when the window is out of focus
-        protected override void OnDeactivate(EventArgs e)
+        //TODO returns every time null
+        /*protected override void OnDeactivate(EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
-        }
+        }*/
     }
 }
