@@ -1,20 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QRcodeScanner
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void selectButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Image test = SelectArea.GetCode();
+            if (test != null)
+            {
+                Clipboard.SetImage(test);
+            }
+            Show();
         }
     }
 }

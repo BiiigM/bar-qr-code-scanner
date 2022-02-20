@@ -1,13 +1,11 @@
-﻿using System.ComponentModel;
-
-namespace QRcodeScanner
+﻿namespace QRcodeScanner
 {
-    partial class MainWindow
+    partial class SelectArea
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private IContainer components = null;
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -31,31 +29,19 @@ namespace QRcodeScanner
         /// </summary>
         private void InitializeComponent()
         {
-            this.selectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // selectButton
-            // 
-            this.selectButton.Location = new System.Drawing.Point(12, 12);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(200, 59);
-            this.selectButton.TabIndex = 0;
-            this.selectButton.Text = "Select Bar/QR-Code";
-            this.selectButton.UseVisualStyleBackColor = true;
-            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
-            // 
-            // MainWindow
+            // SelectArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(224, 83);
-            this.Controls.Add(this.selectButton);
-            this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Name = "SelectArea";
+            this.Text = "Form1";
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.Button selectButton;
 
         #endregion
     }
