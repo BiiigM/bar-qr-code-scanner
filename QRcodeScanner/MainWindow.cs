@@ -8,11 +8,13 @@ namespace QRcodeScanner
     public partial class MainWindow : Form
     {
         private NotifyIcon _notifyIcon = new NotifyIcon();
-        
+        private static Bitmap b = (Bitmap)Image.FromFile(@"Logo.png");
+        private IntPtr pIcon = b.GetHicon();
         public MainWindow()
         {
             InitializeComponent();
-            _notifyIcon.Icon = SystemIcons.Application;
+            this.Icon = Icon.FromHandle(pIcon);
+            _notifyIcon.Icon = Icon.FromHandle(pIcon);
             _notifyIcon.BalloonTipTitle = "Bar/QR-Code Scanner";
         }
 
